@@ -1,0 +1,28 @@
+DictionariesService:
+  Db:
+    LogsConnectionString:
+      settings-key: DictionariesService-LogsConnectionString
+      types:
+        - AzureTableStorage
+    DataConnectionString:
+      settings-key: DictionariesService-DataConnectionString
+  Common:
+    CustomerSupportPhoneNumber:
+      settings-key: CustomerSupportPhoneNumber
+    CustomerSupportEmail:
+      settings-key: CustomerSupportEmail
+    CustomerMarketingWebsiteUrl:
+      settings-key: CustomerMarketingWebsiteUrl
+
+SlackNotifications:
+  AzureQueue:
+    ConnectionString:
+      settings-key: SlackNotificationsConnString
+      types:
+        - AzureTableStorage
+    QueueName:
+      settings-key: SlackQueueName
+
+MonitoringServiceClient:
+  MonitoringServiceUrl:
+    settings-key: MonitoringServiceUrl
