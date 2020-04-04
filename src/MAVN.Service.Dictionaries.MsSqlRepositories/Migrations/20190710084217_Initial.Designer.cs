@@ -21,7 +21,7 @@ namespace MAVN.Service.Dictionaries.MsSqlRepositories.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Lykke.Service.Dictionaries.MsSqlRepositories.Entities.CountryOfResidenceEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Dictionaries.MsSqlRepositories.Entities.CountryOfResidenceEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1733,7 +1733,7 @@ namespace MAVN.Service.Dictionaries.MsSqlRepositories.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Lykke.Service.Dictionaries.MsSqlRepositories.Entities.CountryPhoneCodeEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Dictionaries.MsSqlRepositories.Entities.CountryPhoneCodeEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
