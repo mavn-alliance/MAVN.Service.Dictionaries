@@ -1,5 +1,5 @@
 using AutoMapper;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.Dictionaries.Domain.Entities;
 using MAVN.Service.Dictionaries.Domain.Repositories;
 using MAVN.Service.Dictionaries.MsSqlRepositories.Contexts;
