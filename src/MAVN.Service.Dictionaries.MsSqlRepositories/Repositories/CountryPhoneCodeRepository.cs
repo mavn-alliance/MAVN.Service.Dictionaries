@@ -1,7 +1,7 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.Dictionaries.Domain.Entities;
 using MAVN.Service.Dictionaries.Domain.Repositories;
 using MAVN.Service.Dictionaries.MsSqlRepositories.Contexts;
@@ -11,10 +11,10 @@ namespace MAVN.Service.Dictionaries.MsSqlRepositories.Repositories
 {
     public class CountryPhoneCodeRepository : ICountryPhoneCodeRepository
     {
-        private readonly MsSqlContextFactory<DataContext> _contextFactory;
+        private readonly PostgreSQLContextFactory<DataContext> _contextFactory;
         private readonly IMapper _mapper;
 
-        public CountryPhoneCodeRepository(MsSqlContextFactory<DataContext> contextFactory, IMapper mapper)
+        public CountryPhoneCodeRepository(PostgreSQLContextFactory<DataContext> contextFactory, IMapper mapper)
         {
             _contextFactory = contextFactory;
             _mapper = mapper;

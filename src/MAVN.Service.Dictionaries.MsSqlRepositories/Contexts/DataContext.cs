@@ -1,12 +1,12 @@
-using System.Data.Common;
+﻿using System.Data.Common;
 using JetBrains.Annotations;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.Dictionaries.MsSqlRepositories.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Service.Dictionaries.MsSqlRepositories.Contexts
 {
-    public class DataContext : MsSqlContext
+    public class DataContext : PostgreSQLContext
     {
         private const string Schema = "dictionaries";
 
@@ -31,7 +31,7 @@ namespace MAVN.Service.Dictionaries.MsSqlRepositories.Contexts
         {
         }
 
-        protected override void OnLykkeModelCreating(ModelBuilder modelBuilder)
+        protected override void OnMAVNModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CountryOfResidenceEntity>()
                 .HasData(InitialData.GetCountriesOrResidence());
