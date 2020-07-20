@@ -1,5 +1,5 @@
-using Autofac;
-using MAVN.Common.MsSql;
+﻿using Autofac;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.Dictionaries.Domain.Repositories;
 using MAVN.Service.Dictionaries.MsSqlRepositories.Contexts;
 using MAVN.Service.Dictionaries.MsSqlRepositories.Repositories;
@@ -17,7 +17,7 @@ namespace MAVN.Service.Dictionaries.MsSqlRepositories
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterMsSql(
+            builder.RegisterPostgreSQL(
                 _connectionString,
                 connString => new DataContext(connString, false),
                 dbConn => new DataContext(dbConn));
